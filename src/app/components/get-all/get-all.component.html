@@ -1,0 +1,16 @@
+<table class="table">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Name</th>
+        <th scope="col">Age</th>
+      </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users; let i = index">
+            <th scope="row" style="text-align: center;">{{ i + 1 }}</th> 
+            <td style="text-align: center;">{{ user.name }}</td> 
+            <td style="text-align: center;">{{ user.age }}</td> 
+        </tr>
+    </tbody>
+  </table>
