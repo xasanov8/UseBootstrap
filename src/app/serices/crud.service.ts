@@ -22,4 +22,16 @@ export class CrudService {
   create(data: CreateUser): Observable<CreateUser> { 
     return this.http.post<User>(this.baseUrl + 'InsertPerson', data);
   }
+
+  getById(id: number): Observable<CreateUser> {
+    return this.http.get<CreateUser>(this.baseUrl + `GetIdPerson?id=${id}`)
+  }
+
+  update(id: number, data: CreateUser): Observable<CreateUser> {
+    return this.http.put<CreateUser>(this.baseUrl + `UpdatePerson?id=${id}`, data)
+  }
+
+  delete(id: number): Observable<number> {
+    return this.http.delete<number>(this.baseUrl + `DeletePerson?id=${id}`)
+  }
 }
